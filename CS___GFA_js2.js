@@ -2,7 +2,7 @@ let contacts = [];
 
     function updateDisplay() {
       const list = document.getElementById("contactList");
-      list.innerHTML = ""; // Clear old list
+      list.innerHTML = ""; 
       for (let name of contacts) {
         const li = document.createElement("li");
         li.textContent = name;
@@ -19,16 +19,16 @@ let contacts = [];
       }
 
       if (contacts.length >= 7) {
-        contacts.shift(); // Remove the first contact if list is full
+        contacts.shift();
       }
 
-      contacts.push(name); // Add new contact at end
-      input.value = ""; // Clear input box
+      contacts.push(name); 
+      input.value = ""; 
       updateDisplay();
     }
 
     function removeContact() {
-      contacts.pop(); // Remove last contact
+      contacts.pop(); 
       updateDisplay();
     }
   
